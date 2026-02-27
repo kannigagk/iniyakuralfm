@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Iniya Kural FM</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      margin-top: 100px;
+    }
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 18px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+    .play { background: #28a745; color: white; }
+    .stop { background: #dc3545; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🎙️ Iniya Kural FM</h1>
+    <p>உங்கள் நாளை மாற்றும் குரல்</p>
+
+    <audio id="radio" src="YOUR_STREAMING_LINK_HERE"></audio>
+
+    <button class="play" onclick="playRadio()">▶ Play</button>
+    <button class="stop" onclick="stopRadio()">⏹ Stop</button>
+  </div>
+
+  <script>
+    var radio = document.getElementById("radio");
+
+    function playRadio() {
+      radio.play();
+    }
+
+    function stopRadio() {
+      radio.pause();
+      radio.currentTime = 0;
+    }
+  </script>
+
+</body>
+</html>
